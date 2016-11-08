@@ -1,0 +1,226 @@
+body {
+   margin: 0;
+   padding: 30px 0;
+   font: 76% tahoma,verdana,sans-serif;
+   background: #047 url(imagenes/fondo.png) repeat-x fixed;
+   color :#222;
+}
+
+#eltope{
+   margin: 0;
+}
+
+#contenedor{
+   width: 720px;
+   margin: 0 auto;
+   padding: 20px 20px 0 20px;
+   background: #fff url(imagenes/fondocont.png) no-repeat;
+   color: #222;
+}
+
+a {
+   text-decoration: none;
+   background-color: inherit;
+   color: #26c;
+}
+
+a:hover {
+   text-decoration: underline;
+}
+
+a img {
+   border: 0;
+}
+
+p {
+   margin: 0 0 15px 0;
+   line-height: 1.5em;
+}
+
+acronym, abbr {
+   border-bottom: 1px dotted #A0A0A0;
+   cursor: help;
+   font-style: inherit;
+}
+
+#principal p, #barralateral p {
+   padding: 0 0 0 10px;
+}
+
+#logo {
+   float: left;
+   width: 240px;
+   margin: 0 20px 0 0;
+   padding: 0 0 25px 0;
+   background: #eee;
+   border: 4px solid #dde;
+   text-align: center;
+   color: #555;
+   overflow: auto;
+}
+
+#logo h1 {
+   margin: 50px 5px 1px 5px;
+   letter-spacing: 0px;
+}
+
+#logo a {
+   background-color: inherit;
+   color: #26a;
+   text-decoration: none;
+}
+
+#logo a:hover {
+   background-color: inherit;
+   color: #69e;
+}
+
+#lema {
+   text-align: center;
+   font-size: 1.2em;
+}
+
+#intro p {
+   line-height: 1.5em;
+}
+
+#principal {
+   float: left;
+   width: 530px;
+   margin-right: 20px;
+   padding: 0;
+}
+
+.estilocabecera {
+   display: block;
+   margin: 30px 0 10px 0;
+   padding: 5px 0 5px 8px;
+   background: #eee url(imagenes/gradiente2.png) repeat-x;
+   color: #222;
+   border-top: 1px solid #ddd;
+   border-right: 1px solid #bbb;
+   border-bottom: 1px solid #bbb;
+   border-left: 1px solid #ddd;
+   text-decoration: none;
+}
+
+.cuerpo {
+   text-align: justify;
+}
+
+#barralateral {
+   width: 155px;
+   float: right;
+   margin-top: 20px;
+   font-size: 1em;
+   line-height: 1.3em;
+}
+
+#barralateral p {
+   font-size: 0.9em;
+}
+
+.enlacelateral {
+   display: block;
+   width: 140px;
+   margin: 3px 10px 2px 0;
+   padding: 5px 0 5px 8px;
+   font-size: 1.1em;
+   font-weight: bold;
+   text-align: left;
+   background: #eee url(imagenes/gradiente1.png) repeat-x;
+   color: #26c;
+   border-top: 1px solid #ddd;
+   border-right: 1px solid #bbb;
+   border-bottom: 1px solid #bbb;
+   border-left: 1px solid #ddd;
+}
+
+.cabeceramenu {
+   background: #fff url(imagenes/gradiente2.png) repeat-x;
+   color: #222;
+   border-top: 1px solid #ddd;
+   border-right: 1px solid #888;
+   border-bottom: 1px solid #888;
+   border-left: 1px solid #ddd;
+   text-decoration: none;
+}
+
+.enlacelateral:hover {
+   background: #fff url(imagenes/gradiente2.png) repeat-x;
+   color: #222;
+   border-top: 1px solid #ddd;
+   border-right: 1px solid #888;
+   border-bottom: 1px solid #888;
+   border-left: 1px solid #ddd;
+   text-decoration: none;
+}
+
+#pie {
+   margin: 0 auto 20px auto;
+   width: 760px;
+   background: #fff url(imagenes/fondopie.png) bottom left no-repeat;
+   padding: 0 0 5px 0;
+   font-size: 0.9em;
+   color: #888;
+   text-align: center;
+}
+
+h1, h2, h3, h4 {
+   margin: 0 0 10px 0;
+   font-weight: normal;
+}
+
+h1 {
+   font-size: 2.8em;
+}
+
+h2 {
+   margin: 0 0 4px 0;
+   font-size: 1.8em;
+}
+
+h3 {
+   margin: 20px 0 8px 0;
+   font-size: 1.4em;
+}
+
+h4 {
+   margin: 10px 0 5px 0;
+   font-size: 1.2em;
+}
+
+.imagenes {
+   text-align: center;
+}
+
+.limpio {
+   clear: both;
+   margin: 0;
+}
+
+.publicado {
+   font-size: 0.9em;
+   text-align: right;
+}
+
+.enlaceinterno {
+   font-size: 0.9em;
+   text-align: center;
+}
+
+.bloque {
+   padding: 20px;
+   background: #eee;
+   color: #222;
+   border: 2px solid #ddd;
+}
+
+.creditos {
+   color: #888;
+   background-color: inherit;
+}
+
+.esconder {
+   display: none;
+}

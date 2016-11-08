@@ -1,0 +1,46 @@
+---
+layout: page
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <!-- Pagination links -->
+
+<nav aria-label="Page navigation">
+
+<ul  class="pagination">
+  <li><a href="{{ paginator.previous_page_path }}" class="next">«</a></li>
+
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == 1 %}
+      <li><a href="{{ '/'|link }}">{{ page }}</a></li>
+    {% else %}
+      <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
+    {% endif %}
+  {% endfor %}
+
+  <li><a href="{{ paginator.next_page_path }}" class="next">»</a></li>
+</ul >
+
+</nav>
+
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+
+
+</div>
