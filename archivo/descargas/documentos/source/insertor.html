@@ -6,35 +6,35 @@
 <body text="#000000" bgcolor="#FFFFFF">
 <pre>
 <code><font  size=3 face="Courier New"><font color="#000000"><i>'###############################################################################
-'# Parte de código de ejemplo para un insertor de scripts en Visual Basic 6.0  #
+'# Parte de cÃ³digo de ejemplo para un insertor de scripts en Visual Basic 6.0  #
 '# Hexplus - Fortaleza Romhack 2007                                            #
-'# Este código aplica para un solo diálogo                                     #
-'# Este código fuente no pretende ser el mejor código para realizar esto       #
-'# Si utilizas este código en tus programas o parte de &eacute;l, por favor, hazlo    #
+'# Este cÃ³digo aplica para un solo diÃ¡logo                                     #
+'# Este cÃ³digo fuente no pretende ser el mejor cÃ³digo para realizar esto       #
+'# Si utilizas este cÃ³digo en tus programas o parte de &eacute;l, por favor, hazlo    #
 '# saber por favor en &eacute;l. Nada cuesta dar gracias.                             #
 '# Consultas a: hexplus@gmail.com                                              #
 '###############################################################################
 
 '---------------------------------------------------------------------------------------------------------------
 
-'Esta es la estructura de la tabla, esto deberia ir en un módulo
+'Esta es la estructura de la tabla, esto deberia ir en un mÃ³dulo
 </i><font color="#008000">Type tabla
     hexa </font><font color="#0000FF">As String
     </font><font color="#008000">valor </font><font color="#0000FF">As String
 End </font><font color="#008000">Type
 
-</font><i>'Al igual,  la declaración de la tabla, deberia estar en el mismo módulo
+</font><i>'Al igual,  la declaraciÃ³n de la tabla, deberia estar en el mismo mÃ³dulo
 </i><font color="#0000FF">Public </font><font color="#008000">tablaT</font>(</span><span style="background-color: #FFFFFF"><font color="#FF0000">1</font></span><span style="background-color: #FFFFFF"><font color="#FF0000"> </font><font color="#0000FF">To </font></span><span style="background-color: #FFFFFF"><font color="#FF0000">5000</font></span><span style="background-color: #FFFFFF">) <font color="#0000FF">As </font><font color="#008000">tabla
 
 </font><i>'---------------------------------------------------------------------------------------------------------------
 
 'Este es el procedimiento para convertir e insertar ese texto convertido en bytes en la ROM
-'Podría estar mejor optimizado creo yo, no pretende ser el estándar, ni el mejor código existente
+'PodrÃ­a estar mejor optimizado creo yo, no pretende ser el estÃ¡ndar, ni el mejor cÃ³digo existente
 </i><font color="#0000FF">Private Sub </font><font color="#008000">cmdInsertar_click</font>()
-    <i>'Definición de variables
-    </i><font color="#0000FF">Dim </font><font color="#008000">texto </font><font color="#0000FF">As String </font><i>'Esta variable recogerá el texto que traducimos y queremos insertar
+    <i>'DefiniciÃ³n de variables
+    </i><font color="#0000FF">Dim </font><font color="#008000">texto </font><font color="#0000FF">As String </font><i>'Esta variable recogerÃ¡ el texto que traducimos y queremos insertar
     </i><font color="#008000">texto </font>= <font color="#FF00FF">&quot;&quot; </font><i>'la inicializo
-    </i><font color="#0000FF">Dim </font><font color="#008000">cadenaInsertar </font><font color="#0000FF">As String </font><i>'Recogerá el texto traducido ya convertido en bytes
+    </i><font color="#0000FF">Dim </font><font color="#008000">cadenaInsertar </font><font color="#0000FF">As String </font><i>'RecogerÃ¡ el texto traducido ya convertido en bytes
     </i><font color="#008000">cadenaInsertar </font>= <font color="#FF00FF">&quot;&quot;  </font><i>'inicializo
     </i><font color="#0000FF">Dim </font><font color="#008000">maximo </font><font color="#0000FF">As Integer  </font><i>'maximo es una variable que me indica cual es la palabra mas larga en la
                               'tabla MTE, si es DTE obvio que siempre es 2
@@ -50,7 +50,7 @@ End </font><font color="#008000">Type
 
 
     </i><font color="#0000FF">If Len</font>(<font color="#008000">rtxtTraducido</font>.<font color="#008000">Text</font>) = </span><span style="background-color: #FFFFFF"><font color="#FF0000">0</font></span><span style="background-color: #FFFFFF"><font color="#FF0000"> </font><font color="#0000FF">Then
-        MsgBox </font><font color="#FF00FF">&quot;¡Nada que insertar!&quot;
+        MsgBox </font><font color="#FF00FF">&quot;Â¡Nada que insertar!&quot;
         </font><font color="#0000FF">Exit Sub
     End If
 
@@ -58,11 +58,11 @@ End </font><font color="#008000">Type
     </i><font color="#0000FF">Dim </font><font color="#008000">nroArchivo </font><font color="#0000FF">As Integer </font><i>'Numero de archivo en donde vamos a insertar
 
 
-    'Pedimos confirmación
-    </i><font color="#008000">mensaje </font>= <font color="#0000FF">MsgBox</font>(<font color="#FF00FF">&quot;¿Está seguro de insertar el Script?&quot;</font>, <font color="#008000">vbQuestion </font>+ <font color="#008000">vbYesNo</font>, <font color="#FF00FF">&quot;Confirmación requerida&quot;</font>)
+    'Pedimos confirmaciÃ³n
+    </i><font color="#008000">mensaje </font>= <font color="#0000FF">MsgBox</font>(<font color="#FF00FF">&quot;Â¿EstÃ¡ seguro de insertar el Script?&quot;</font>, <font color="#008000">vbQuestion </font>+ <font color="#008000">vbYesNo</font>, <font color="#FF00FF">&quot;ConfirmaciÃ³n requerida&quot;</font>)
     <font color="#0000FF">If </font><font color="#008000">mensaje </font>&lt;&gt; <font color="#008000">vbYes </font><font color="#0000FF">Then Exit Sub
 
-    </font><i>'Transformación a formato de inserción:
+    </font><i>'TransformaciÃ³n a formato de inserciÃ³n:
     
     </i><font color="#008000">texto </font>= <font color="#008000">rtxtTraducido</font>.<font color="#008000">Text </font><i>'Es el texto de la caja de texto traducido, se la asignamos a la variable texto
     </i><font color="#008000">maximo </font>= <font color="#008000">masLargoO </font><i>'Es el valor del largo de la palabra mas larga de la tabla
@@ -70,27 +70,27 @@ End </font><font color="#008000">Type
     </i><font color="#0000FF">For </font><font color="#008000">i </font>= </span><span style="background-color: #FFFFFF"><font color="#FF0000">1</font></span><span style="background-color: #FFFFFF"><font color="#FF0000"> </font><font color="#0000FF">To Len</font>(<font color="#008000">texto</font>) <i>'De 1 al largo total del texto, recorro todo el texto
         </i><font color="#0000FF">For </font><font color="#008000">j </font>= <font color="#008000">maximo </font><font color="#0000FF">To </font></span><span style="background-color: #FFFFFF"><font color="#FF0000">1</font></span><span style="background-color: #FFFFFF"><font color="#FF0000"> </font><font color="#008000">Step </font>-</span><span style="background-color: #FFFFFF"><font color="#FF0000">1</font></span><span style="background-color: #FFFFFF"><font color="#FF0000"> </font><i>'Del largo de la palabra mas larga a 1
 
-            </i><font color="#008000">tmp </font>= <font color="#0000FF">Mid</font>(<font color="#008000">texto</font>, <font color="#008000">i</font>, <font color="#008000">j</font>) <i>'Leo una porción de cadena del texto
+            </i><font color="#008000">tmp </font>= <font color="#0000FF">Mid</font>(<font color="#008000">texto</font>, <font color="#008000">i</font>, <font color="#008000">j</font>) <i>'Leo una porciÃ³n de cadena del texto
 
             'Primero trato los saltos de linea
-            </i><font color="#0000FF">If </font><font color="#008000">tmp </font>= <font color="#008000">vbCr </font><font color="#0000FF">Then </font><i>'Si esa porción es un vbCr, entonces es un salto de línea
-                 </i><font color="#0000FF">For </font><font color="#008000">k </font>= </span><span style="background-color: #FFFFFF"><font color="#FF0000">1</font></span><span style="background-color: #FFFFFF"><font color="#FF0000"> </font><font color="#0000FF">To </font></span><span style="background-color: #FFFFFF"><font color="#FF0000">5000</font></span><span style="background-color: #FFFFFF"><font color="#FF0000"> </font><i>'En busca del * del salto de línea en la tabla
-                     </i><font color="#0000FF">If </font><font color="#008000">tablaT</font>(<font color="#008000">k</font>).<font color="#008000">valor </font>= <font color="#FF00FF">&quot;LINE&quot; </font><font color="#0000FF">Then </font><i>'En este caso busco 'LINE' en la tabla ¨&quot;traducida&quot;
+            </i><font color="#0000FF">If </font><font color="#008000">tmp </font>= <font color="#008000">vbCr </font><font color="#0000FF">Then </font><i>'Si esa porciÃ³n es un vbCr, entonces es un salto de lÃ­nea
+                 </i><font color="#0000FF">For </font><font color="#008000">k </font>= </span><span style="background-color: #FFFFFF"><font color="#FF0000">1</font></span><span style="background-color: #FFFFFF"><font color="#FF0000"> </font><font color="#0000FF">To </font></span><span style="background-color: #FFFFFF"><font color="#FF0000">5000</font></span><span style="background-color: #FFFFFF"><font color="#FF0000"> </font><i>'En busca del * del salto de lÃ­nea en la tabla
+                     </i><font color="#0000FF">If </font><font color="#008000">tablaT</font>(<font color="#008000">k</font>).<font color="#008000">valor </font>= <font color="#FF00FF">&quot;LINE&quot; </font><font color="#0000FF">Then </font><i>'En este caso busco 'LINE' en la tabla Â¨&quot;traducida&quot;
                                                           'valor que asigne para en salto de linea
-                                                      'Si buscara un * me devolvería el valor del asterisco
+                                                      'Si buscara un * me devolverÃ­a el valor del asterisco
                          </i><font color="#008000">cadenaInsertar </font>= <font color="#008000">cadenaInsertar </font>&amp; <font color="#008000">HexToStr</font>(<font color="#008000">tablaT</font>(<font color="#008000">k</font>).<font color="#008000">hexa</font>) <i>'Acumulo el byte en la cadena a insertar
                          </i><font color="#0000FF">Exit For </font><i>'Aborto el For
                      </i><font color="#0000FF">End If
                  Next
                  </font><font color="#008000">i </font>= <font color="#008000">i </font>+ </span><span style="background-color: #FFFFFF"><font color="#FF0000">1</font></span><span style="background-color: #FFFFFF"><font color="#FF0000"> </font><i>'Sumo 1 a la posicion en el texto
-                 </i><font color="#0000FF">GoTo </font><font color="#008000">siguiente  ´Voy a siguiente</font>, <font color="#008000">para leer otra cadena </font>/ <font color="#008000">A veces </font><font color="#0000FF">GoTo </font><font color="#008000">es una maldicion</font>, <font color="#008000">a veces ideal </font>^^
+                 </i><font color="#0000FF">GoTo </font><font color="#008000">siguiente  Â´Voy a siguiente</font>, <font color="#008000">para leer otra cadena </font>/ <font color="#008000">A veces </font><font color="#0000FF">GoTo </font><font color="#008000">es una maldicion</font>, <font color="#008000">a veces ideal </font>^^
              <font color="#0000FF">End If
 
              </font><i>'Luego trato los fines de bloque
              </i><font color="#0000FF">If </font><font color="#008000">tmp </font>= <font color="#008000">lEnclosure </font><font color="#0000FF">Then </font><i>'Cierre izquierdo(lEnclosure), ya sea { o &lt;
                  </i><font color="#008000">tag </font>= <font color="#FF00FF">&quot;&quot;
                  </font><font color="#0000FF">While </font><font color="#008000">tmp </font>&lt;&gt; <font color="#008000">rEnclosure </font><i>'Mientras tmp sea diferente a cierre derecho (rEnclosure)
-                     </i><font color="#008000">i </font>= <font color="#008000">i </font>+ </span><span style="background-color: #FFFFFF"><font color="#FF0000">1</font></span><span style="background-color: #FFFFFF"><font color="#FF0000"> </font><i>'Sumo 1 a la posición que tenemos en el texto
+                     </i><font color="#008000">i </font>= <font color="#008000">i </font>+ </span><span style="background-color: #FFFFFF"><font color="#FF0000">1</font></span><span style="background-color: #FFFFFF"><font color="#FF0000"> </font><i>'Sumo 1 a la posiciÃ³n que tenemos en el texto
                      </i><font color="#008000">tmp </font>= <font color="#0000FF">Mid</font>(<font color="#008000">texto</font>, <font color="#008000">i</font>, <font color="#008000">j</font>) <i>'Leo del texto
                      </i><font color="#008000">tag </font>= <font color="#008000">tag </font>&amp; <font color="#008000">tmp </font><i>'Voy acumulando lo que hay despues del inicio de la llave
                      </i><font color="#0000FF">If Left</font>(<font color="#008000">tag</font>, <font color="#0000FF">Len</font>(<font color="#008000">tag</font>) - </span><span style="background-color: #FFFFFF"><font color="#FF0000">1</font></span><span style="background-color: #FFFFFF">) = <font color="#FF00FF">&quot;END&quot; </font><font color="#0000FF">Then </font><i>'Comparo si tag es igual a END
@@ -106,7 +106,7 @@ End </font><font color="#008000">Type
                  Wend
              End If
              
-             </font><i>'Cualquier otro valor que no sea un salto de línea o un fin de bloque
+             </font><i>'Cualquier otro valor que no sea un salto de lÃ­nea o un fin de bloque
              </i><font color="#0000FF">For </font><font color="#008000">k </font>= </span><span style="background-color: #FFFFFF"><font color="#FF0000">1</font></span><span style="background-color: #FFFFFF"><font color="#FF0000"> </font><font color="#0000FF">To </font></span><span style="background-color: #FFFFFF"><font color="#FF0000">5000
 </font></span><span style="background-color: #FFFFFF"><font color="#FF0000">                 </font><font color="#0000FF">If </font><font color="#008000">tablaT</font>(<font color="#008000">k</font>).<font color="#008000">valor </font>= <font color="#008000">vbNullString </font><font color="#0000FF">Then Exit For
                  If </font><font color="#008000">tmp </font>= <font color="#FF00FF">&quot;END&quot; </font><font color="#0000FF">Then Exit For </font><i>'Esto es por si existiese una palabra por ejemplo 'TENDENCIA'
@@ -119,10 +119,10 @@ End </font><font color="#008000">Type
              Next
          Next
          </font><i>'Se supone que para este punto que el largo de tmp tiene que quedar en cero
-         </i><font color="#0000FF">If Len</font>(<font color="#008000">tmp</font>) = </span><span style="background-color: #FFFFFF"><font color="#FF0000">1</font></span><span style="background-color: #FFFFFF"><font color="#FF0000"> </font><font color="#0000FF">Then </font><i>'Si el largo de tmp es 1, quiere decir que no se encontró ese caracter en la tabla traducida
-             </i><font color="#008000">mensaje </font>= <font color="#0000FF">MsgBox</font>(<font color="#FF00FF">&quot;Caracter '&quot; </font>&amp; <font color="#008000">tmp </font>&amp; <font color="#FF00FF">&quot;'&quot; </font>&amp; <font color="#008000">vbCrLf </font>&amp; <font color="#FF00FF">&quot;[Ascii: &quot; </font>&amp; <font color="#0000FF">Asc</font>(<font color="#008000">tmp</font>) &amp; <font color="#FF00FF">&quot;] no existe en la tabla.&quot; </font>&amp; <font color="#008000">vbCrLf </font>&amp; <font color="#FF00FF">&quot;¿Desea insertar el script de todos modos?&quot;</font>, <font color="#008000">vbCritical </font>+ <font color="#008000">vbYesNo</font>, <font color="#FF00FF">&quot;Precaución&quot;</font>)
+         </i><font color="#0000FF">If Len</font>(<font color="#008000">tmp</font>) = </span><span style="background-color: #FFFFFF"><font color="#FF0000">1</font></span><span style="background-color: #FFFFFF"><font color="#FF0000"> </font><font color="#0000FF">Then </font><i>'Si el largo de tmp es 1, quiere decir que no se encontrÃ³ ese caracter en la tabla traducida
+             </i><font color="#008000">mensaje </font>= <font color="#0000FF">MsgBox</font>(<font color="#FF00FF">&quot;Caracter '&quot; </font>&amp; <font color="#008000">tmp </font>&amp; <font color="#FF00FF">&quot;'&quot; </font>&amp; <font color="#008000">vbCrLf </font>&amp; <font color="#FF00FF">&quot;[Ascii: &quot; </font>&amp; <font color="#0000FF">Asc</font>(<font color="#008000">tmp</font>) &amp; <font color="#FF00FF">&quot;] no existe en la tabla.&quot; </font>&amp; <font color="#008000">vbCrLf </font>&amp; <font color="#FF00FF">&quot;Â¿Desea insertar el script de todos modos?&quot;</font>, <font color="#008000">vbCritical </font>+ <font color="#008000">vbYesNo</font>, <font color="#FF00FF">&quot;PrecauciÃ³n&quot;</font>)
              <font color="#0000FF">If </font><font color="#008000">mensaje </font>= <font color="#008000">vbNo </font><font color="#0000FF">Then
-                 </font><font color="#008000">rtxtTraducido</font>.<font color="#008000">SelStart </font>= <font color="#008000">i   </font><i>'Nos posicionamos en donde está el caracter no encontrado en el RichTexbox
+                 </font><font color="#008000">rtxtTraducido</font>.<font color="#008000">SelStart </font>= <font color="#008000">i   </font><i>'Nos posicionamos en donde estÃ¡ el caracter no encontrado en el RichTexbox
                  </i><font color="#008000">rtxtTraducido</font>.<font color="#008000">SelLength </font>= </span><span style="background-color: #FFFFFF"><font color="#FF0000">1
 </font></span><span style="background-color: #FFFFFF"><font color="#FF0000">                 </font><font color="#008000">rtxtTraducido</font>.<font color="#008000">SetFocus
                  </font><font color="#0000FF">Exit Sub
@@ -131,7 +131,7 @@ End </font><font color="#008000">Type
 </font><font color="#008000">siguiente</font>:
      <font color="#0000FF">Next
      
-     </font><i>'Inserción:
+     </font><i>'InserciÃ³n:
      'Se llega a este punto cuando ya se ha recorrido toda la cadena de texto que queremos insertar
      </i><font color="#008000">offset </font>= <font color="#008000">HexToDec</font>(<font color="#0000FF">Left</font>(<font color="#008000">Scripts</font>.<font color="#008000">FileName</font>, <font color="#0000FF">Len</font>(<font color="#008000">Scripts</font>.<font color="#008000">FileName</font>) - </span><span style="background-color: #FFFFFF"><font color="#FF0000">4</font></span><span style="background-color: #FFFFFF">)) + </span><span style="background-color: #FFFFFF"><font color="#FF0000">1</font></span><span style="background-color: #FFFFFF"><font color="#FF0000"> </font><i>'Esto lo hago pues este codigo utiliza el nombre
      'de archivos del Hextractor (programa que hice para extraer scripts)
@@ -139,15 +139,15 @@ End </font><font color="#008000">Type
      Open </font><font color="#008000">ROM </font><font color="#0000FF">For </font><font color="#008000">Binary </font><font color="#0000FF">As </font><font color="#FF00FF">#nroArchivo
      </font><font color="#0000FF">Put </font><font color="#FF00FF">#nroArchivo, offset, cadenaInsertar
      </font><font color="#0000FF">Close </font><font color="#FF00FF">#nroArchivo
-     </font><font color="#0000FF">MsgBox </font><font color="#FF00FF">&quot;Se han insertado &quot; </font>&amp; <font color="#0000FF">Len</font>(<font color="#008000">cadenaInsertar</font>) &amp; <font color="#FF00FF">&quot; bytes en la dirección 0x&quot; </font>&amp; <font color="#0000FF">Left</font>(<font color="#008000">Scripts</font>.<font color="#008000">FileName</font>, <font color="#0000FF">Len</font>(<font color="#008000">Scripts</font>.<font color="#008000">FileName</font>) - </span><span style="background-color: #FFFFFF"><font color="#FF0000">4</font></span><span style="background-color: #FFFFFF">) &amp; <font color="#FF00FF">&quot;.&quot;
+     </font><font color="#0000FF">MsgBox </font><font color="#FF00FF">&quot;Se han insertado &quot; </font>&amp; <font color="#0000FF">Len</font>(<font color="#008000">cadenaInsertar</font>) &amp; <font color="#FF00FF">&quot; bytes en la direcciÃ³n 0x&quot; </font>&amp; <font color="#0000FF">Left</font>(<font color="#008000">Scripts</font>.<font color="#008000">FileName</font>, <font color="#0000FF">Len</font>(<font color="#008000">Scripts</font>.<font color="#008000">FileName</font>) - </span><span style="background-color: #FFFFFF"><font color="#FF0000">4</font></span><span style="background-color: #FFFFFF">) &amp; <font color="#FF00FF">&quot;.&quot;
 
 </font><font color="#0000FF">End Sub
 
 </font><i>'---------------------------------------------------------------------------------------------------------------
 
-'Procedimiento sencillísimo para cargar una tabla thingy con salto de linea y fin de bloque de texto
-'Podría mejorarse, por supuesto
-'En este caso recibimos el número de archivo como parámetro, pero puedes adecuarlo a tu gusto
+'Procedimiento sencillÃ­simo para cargar una tabla thingy con salto de linea y fin de bloque de texto
+'PodrÃ­a mejorarse, por supuesto
+'En este caso recibimos el nÃºmero de archivo como parÃ¡metro, pero puedes adecuarlo a tu gusto
 </i><font color="#0000FF">Private Sub </font><font color="#008000">cargarTablaT</font>(<font color="#008000">nro </font><font color="#0000FF">As Integer</font>)
 <i>'On Error Resume Next
 </i><font color="#0000FF">Dim </font><font color="#008000">cadena </font><font color="#0000FF">As String
@@ -178,9 +178,9 @@ Wend
 End Sub
 
 </font><i>'---------------------------------------------------------------------------------------------------------------
-'Función que devuelve la palabra más larga en la tabla
+'FunciÃ³n que devuelve la palabra mÃ¡s larga en la tabla
 </i><font color="#0000FF">Private Function </font><font color="#008000">masLargaT</font>() <font color="#0000FF">As Integer
-</font><i>'Esta funcion mide cual palabra es la más larga que existe en la tabla
+</font><i>'Esta funcion mide cual palabra es la mÃ¡s larga que existe en la tabla
 </i><font color="#0000FF">Dim </font><font color="#008000">masLargo </font><font color="#0000FF">As Integer
 </font><font color="#008000">masLargo </font>= </span><span style="background-color: #FFFFFF"><font color="#FF0000">1
 </font></span><span style="background-color: #FFFFFF"><font color="#0000FF">Dim </font><font color="#008000">largo </font><font color="#0000FF">As Integer
@@ -201,7 +201,7 @@ For </font><font color="#008000">i </font>= </span><span style="background-color
 
 </font><i>'-------------------------------------------------------------------------------------------------------------------------
 
-'Función para convertir de Hexadecimal a Decimal, utilizo &eacute;sta, pues la funcion Hex$(String) tiene límitantes cuando
+'FunciÃ³n para convertir de Hexadecimal a Decimal, utilizo &eacute;sta, pues la funcion Hex$(String) tiene lÃ­mitantes cuando
 'se trata de numeros muy grandes
 </i><font color="#0000FF">Function </font><font color="#008000">HexToDec</font>(<font color="#008000">HexStr </font><font color="#0000FF">As String</font>) <font color="#0000FF">As Long </font><i>'Funcion para convertir de hexadecimal a decimal
 </i><font color="#0000FF">Dim </font><font color="#008000">strlen </font><font color="#0000FF">As Integer
@@ -232,7 +232,7 @@ Dim </font><font color="#008000">Word </font><font color="#0000FF">As String </f
             </font><font color="#0000FF">Case </font><font color="#FF00FF">&quot;4&quot;
                 </font><font color="#008000">lngTemp </font>= (</span><span style="background-color: #FFFFFF"><font color="#FF0000">16</font></span><span style="background-color: #FFFFFF"><font color="#FF0000"> </font>^ (<font color="#008000">Ctr </font>- </span><span style="background-color: #FFFFFF"><font color="#FF0000">1</font></span><span style="background-color: #FFFFFF">)) * </span><span style="background-color: #FFFFFF"><font color="#FF0000">4</font></span><span style="background-color: #FFFFFF"><font color="#FF0000"> </font>+ <font color="#008000">lngTemp
             </font><font color="#0000FF">Case </font><font color="#FF00FF">&quot;5&quot;
-                </font><font color="#008000">lngTemp </font>= (</span><span style="background-color: #FFFFFF"><font color="#FF0000">16</font></span><span style="background-color: #FFFFFF"><font color="#FF0000"> </font>^ (<font color="#008000">Ctr </font>- </span><span style="background-color: #FFFFFF"><font color="#FF0000">1</font></span><span style="background-color: #FFFFFF">)) * </span><span style="background-color: #FFFFFF"><font color="#FF0000">5</font></span><span style="background-color: #FFFFFF"><font color="#FF0000"> </font>+ <font color="#008000">lngTemp
+                </font><font color="#008000">lngTemp </font>= (</span><span style="background-color: #FFFFFF"><font color="#FF0000">16</fod-color: #FFFFFF"><font color="#FF0000">16</foFF"><font color="#FF0000"> </font>^ (<font color="#008000">Ctr </font>- </span><span style="background-color: #FFFFFF"><font color="#FF0000">1</font></span><span style="background-color: #FFFFFF">)) * </span><span style="background-color: #FFFFFF"><font color="#FF0000">5</font></span><span style="background-color: #FFFFFF"><font color="#FF0000"> </font>+ <font color="#008000">lngTemp
             </font><font color="#0000FF">Case </font><font color="#FF00FF">&quot;6&quot;
                 </font><font color="#008000">lngTemp </font>= (</span><span style="background-color: #FFFFFF"><font color="#FF0000">16</font></span><span style="background-color: #FFFFFF"><font color="#FF0000"> </font>^ (<font color="#008000">Ctr </font>- </span><span style="background-color: #FFFFFF"><font color="#FF0000">1</font></span><span style="background-color: #FFFFFF">)) * </span><span style="background-color: #FFFFFF"><font color="#FF0000">6</font></span><span style="background-color: #FFFFFF"><font color="#FF0000"> </font>+ <font color="#008000">lngTemp
             </font><font color="#0000FF">Case </font><font color="#FF00FF">&quot;7&quot;
@@ -264,7 +264,7 @@ Dim </font><font color="#008000">Word </font><font color="#0000FF">As String </f
 
 </font><i>'---------------------------------------------------------------------------------------------------------------
 
-</i><font color="#008000">Convierte un número hexadecimal a una cadena de </font><font color="#FF00FF">&quot;texto&quot;
+</i><font color="#008000">Convierte un nÃºmero hexadecimal a una cadena de </font><font color="#FF00FF">&quot;texto&quot;
 
 </font><font color="#0000FF">Function </font><font color="#008000">HexToStr</font>(<font color="#008000">HexStr </font><font color="#0000FF">As String</font>) <font color="#0000FF">As String
 Dim </font><font color="#008000">nCtr </font><font color="#0000FF">As Long
